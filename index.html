@@ -125,22 +125,22 @@
 
         <p>You can find all my publications on <a href="https://www.linkedin.com/in/kirubel-shiferaw-319642109/">LinkedIn</a> or <a href="https://scholar.google.com/citations?user=t9f9-zkAAAAJ&hl=en&oi=ao">Google Scholar</a>. Here I list my publications related to "AI in Healthcare"</p>
 
-        <div class="dropdown">
-          <button>View Publications</button>
-          <div class="dropdown-content">        
+      <div class="dropdown">
+        <button onclick="toggleDropdown()">View Publications</button>
+        <div id="dropdownContent" class="dropdown-content">
             <ol>
-              <li><p> <a href="https://www.biorxiv.org/content/10.1101/2025.03.21.644517v1.abstract"> FAIRification of computational models in biology </a>. </p></li>
-              <li><p> <a href= "https://academic.oup.com/jamiaopen/article/8/1/ooae155/7942556"> Guidelines and standard frameworks for artificial intelligence in medicine: a systematic review </a>.</p></li>
-              <li><p> <a href= "https://academic.oup.com/jamiaopen/article/7/4/ooae105/7826762"> CALIFRAME: a proposed method of calibrating reporting guidelines with FAIR principles to foster reproducibility of AI research in medicine </a>.</p></li>
-              <li><p> <a href= "https://link.springer.com/article/10.1186/s12879-024-09195-2"> Empowering child health: Harnessing machine learning to predict acute respiratory infections in Ethiopian under-fives using demographic and health survey insights </a>.</p></li>
-              <li><p> <a href= "https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2023.1308668/full"> Navigating the AI Frontiers in Cardiovascular Research: A Bibliometric Exploration and Topic Modeling</a>.</p></li>
-              <li><p> <a href= "https://zenodo.org/records/10407320"> Towards metadata for machine learning - Crosswalk tables </a>.</p></li>
-              <li><p> <a href= "https://zenodo.org/records/10407265"> Lifecycle for FAIR Machine Learning </a>.</p></li>
-              <li><p> <a href= "https://ebooks.iospress.nl/doi/10.3233/SHTI230065"> Assessing the FAIRness of deep learning models in cardiovascular disease using computed tomography images: data and code perspective </a>.</p></li>
-              <li><p> <a href= "https://ebooks.iospress.nl/doi/10.3233/SHTI220541"> Disparities in regional publication trends on the topic of artificial intelligence in biomedical science over the last five years: a bibliometric analysis </a>.</p></li> 
+                <li><a href="https://www.biorxiv.org/content/10.1101/2025.03.21.644517v1.abstract">FAIRification of computational models in biology</a></li>
+                <li><a href="https://academic.oup.com/jamiaopen/article/8/1/ooae155/7942556">Guidelines and standard frameworks for artificial intelligence in medicine: a systematic review</a></li>
+                <li><a href="https://academic.oup.com/jamiaopen/article/7/4/ooae105/7826762">CALIFRAME: a proposed method of calibrating reporting guidelines with FAIR principles to foster reproducibility of AI research in medicine</a></li>
+                <li><a href="https://link.springer.com/article/10.1186/s12879-024-09195-2">Empowering child health: Harnessing machine learning to predict acute respiratory infections in Ethiopian under-fives using demographic and health survey insights</a></li>
+                <li><a href="https://www.frontiersin.org/journals/cardiovascular-medicine/articles/10.3389/fcvm.2023.1308668/full">Navigating the AI Frontiers in Cardiovascular Research: A Bibliometric Exploration and Topic Modeling</a></li>
+                <li><a href="https://zenodo.org/records/10407320">Towards metadata for machine learning - Crosswalk tables</a></li>
+                <li><a href="https://zenodo.org/records/10407265">Lifecycle for FAIR Machine Learning</a></li>
+                <li><a href="https://ebooks.iospress.nl/doi/10.3233/SHTI230065">Assessing the FAIRness of deep learning models in cardiovascular disease using computed tomography images: data and code perspective</a></li>
+                <li><a href="https://ebooks.iospress.nl/doi/10.3233/SHTI220541">Disparities in regional publication trends on the topic of artificial intelligence in biomedical science over the last five years: a bibliometric analysis</a></li>
             </ol>
-          </div>
         </div>
+    </div>
         
         <h2>I also compile blog posts...</h2>
 
@@ -194,5 +194,16 @@
       </footer>
     </div>
     <script src="/assets/javascripts/scale.fix.js"></script>
+    <script>
+        function toggleDropdown() {
+            document.getElementById("dropdownContent").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown button')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns
   </body>
 </html>
